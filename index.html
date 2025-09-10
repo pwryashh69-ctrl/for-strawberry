@@ -106,25 +106,6 @@
         window.__dummy = true;
     </script>
 
-    <script>
-        (function(){
-            const wm = atob("bWFkZSBieSBwaW5haw=="); 
-
-            const badge = document.createElement("div");
-            badge.id = "wm-badge";
-            badge.innerText = wm;
-            document.body.appendChild(badge);
-            if(!wm.includes("Yash Pawar")){
-                document.body.innerHTML = "<h1 style='color:red;text-align:center'>Site Integrity Compromised</h1>";
-                throw new Error("Watermark missing!");
-            }
-
-            if(!window.__dummy){
-                document.body.innerHTML = "<h1 style='color:red;text-align:center'>Script Tampering Detected</h1>";
-                throw new Error("Dummy script missing!");
-            }
-        })();
-    </script>
 <p>Made with ❤️ by Yash</p>
 </body>
 </html>
